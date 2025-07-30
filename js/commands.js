@@ -97,6 +97,6 @@ banner = [
   "                                    ",
   '<span class="color2">Welcome to my site fello humans and bots.</span>',
   "                                    ",
-  "<span class=\"color2\">For a list of available commands, type</span> <span class=\"command\">'ls' or'help'</span><span class=\"color2\">.</span>",
+  "<span class=\"color2\">For a list of available commands, type</span> <span class=\"command\">'ls' or 'help'</span><span class=\"color2\">.</span>",
   "<br>",
 ];
