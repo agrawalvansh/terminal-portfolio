@@ -55,7 +55,7 @@ function enterKey(e) {
     if (e.keyCode == 13) {
       commands.push(command.innerHTML);
       git = commands.length;
-      addLine("visitor@fkcodes.com:~$ " + command.innerHTML, "no-animation", 0);
+      addLine("visitor@agrawalvansh.me:~$ " + command.innerHTML, "no-animation", 0);
       commander(command.innerHTML.toLowerCase());
       command.innerHTML = "";
       textarea.value = "";
@@ -82,6 +82,9 @@ function commander(cmd) {
     case "help":
       loopLines(help, "color2 margin", 80);
       break;
+    case "ls":
+      loopLines(help, "color2 margin", 80);
+      break;
     case "whois":
       loopLines(whois, "color2 margin", 80);
       break;
@@ -98,8 +101,8 @@ function commander(cmd) {
         window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
       }, 1000); 
       break;
-    case "social":
-      loopLines(social, "color2 margin", 80);
+    case "contact":
+      loopLines(contact, "color2 margin", 80);
       break;
     case "secret":
       liner.classList.add("password");
@@ -117,7 +120,7 @@ function commander(cmd) {
       addLine("<br>", "command", 80 * commands.length + 50);
       break;
     case "email":
-      addLine('Opening mailto:<a href="mailto:forrest@fkcodes.com">forrest@fkcodes.com</a>...', "color2", 80);
+      addLine('Opening mailto:<a href="mailto:agrawalvanshn@gmail.com">agrawalvanshn@gmail.com</a>...', "color2", 80);
       newTab(email);
       break;
     case "clear":
@@ -130,13 +133,13 @@ function commander(cmd) {
       loopLines(banner, "", 80);
       break;
     // socials
-    case "youtube":
-      addLine("Opening YouTube...", "color2", 80);
-      newTab(youtube);
+    case "website":
+      addLine("Opening Website...", "color2", 80);
+      newTab(website);
       break;
-    case "twitter":
-      addLine("Opening Twitter...", "color2", 0);
-      newTab(twitter);
+    case "resume":
+      addLine("Opening Resume...", "color2", 80);
+      newTab(resume);
       break;
     case "linkedin":
       addLine("Opening LinkedIn...", "color2", 0);
@@ -151,7 +154,7 @@ function commander(cmd) {
       newTab(github);
       break;
     default:
-      addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'help'</span>.</span>", "error", 100);
+      addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'ls' or 'help'</span>.</span>", "error", 100);
       break;
   }
 }
@@ -176,6 +179,17 @@ function addLine(text, style, time) {
     var next = document.createElement("p");
     next.innerHTML = t;
     next.className = style;
+
+    // Treat regular content (everything except the banner) as paragraph text
+    // Banner lines come in with an empty style string, whereas informational
+    // content uses classes like "color2" / "margin". Only the banner should
+    // keep the typing animation + nowrap behaviour.
+    if (style && style.indexOf("color2") !== -1) {
+      // Allow normal paragraph wrapping
+      next.style.whiteSpace = "normal";
+      // Disable the typing animation for paragraphs
+      next.style.animation = "none";
+    }
 
     before.parentNode.insertBefore(next, before);
 

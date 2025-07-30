@@ -9,6 +9,10 @@ body {
   font-family: cursor, monospace;
   overflow-x: hidden;
 }
+
+body::-webkit-scrollbar {
+  display: none; /* Completely hide the scrollbar */
+}
 ::selection {
   color: #211830;
   background-color: #519975;
@@ -61,7 +65,7 @@ b {
 }
 #liner::before {
   color: #519975;
-  content: "visitor@fkcodes.com:~$";
+  content: "visitor@agrawalvansh.me:~$";
 }
 #liner.password::before {
   content: "Password:";
