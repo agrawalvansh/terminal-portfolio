@@ -8,6 +8,8 @@ var git = 0;
 var pw = false;
 let pwd = false;
 var commands = [];
+// Track if we are waiting for the user to enter a query after typing just `ask`
+var awaitingAsk = false;
 
 setTimeout(function() {
   loopLines(banner, "", 80);
@@ -16,11 +18,11 @@ setTimeout(function() {
 
 window.addEventListener("keyup", enterKey);
 
-console.log(
-  "%cYou hacked my password!ðŸ˜ ",
-  "color: #04ff00; font-weight: bold; font-size: 24px;"
-);
-console.log("%cPassword: '" + password + "' - I wonder what it does?ðŸ¤”", "color: grey");
+// console.log(
+//   "%cYou hacked my password!ðŸ˜ ",
+//   "color: #04ff00; font-weight: bold; font-size: 24px;"
+// );
+// console.log("%cPassword: '" + password + "' - I wonder what it does?ðŸ¤”", "color: grey");
 
 //init
 textarea.value = "";
@@ -78,6 +80,15 @@ function enterKey(e) {
 }
 
 function commander(cmd) {
+  // If the previous command was just `ask`, treat the current input as the query
+  if (awaitingAsk) {
+    awaitingAsk = false;
+    askGemini(cmd.trim()).then((answer) => {
+      addLine(answer, "color2", 80);
+    });
+    return;
+  }
+
   switch (cmd.toLowerCase()) {
     case "help":
       loopLines(help, "color2 margin", 80);
@@ -152,6 +163,20 @@ function commander(cmd) {
     case "github":
       addLine("Opening GitHub...", "color2", 0);
       newTab(github);
+      break;
+    case "ask":
+      
+      // Remove the command keyword and trim remaining text to capture the actual query
+      const userQuery = command.innerHTML.replace("ask", "").trim();
+      // If no query was provided, prompt the user for one
+      if (!userQuery) {
+        awaitingAsk = true; // wait for next input as the query
+        addLine("ask your query about vansh", "color2", 80);
+      } else {
+        askGemini(userQuery).then((answer) => {
+          addLine(answer, "color2", 80);
+        });
+      }
       break;
     default:
       addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'ls' or 'help'</span>.</span>", "error", 100);

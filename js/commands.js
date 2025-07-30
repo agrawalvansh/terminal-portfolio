@@ -67,6 +67,8 @@ help = [
   "         - Take a look at some of my work",
   '<span class="command">resume</span>',
   "         - Take a look at my Resume",
+  '<span class="command">ask</span>',
+  "         - Ask me anything about Vansh",
   '<span class="command">secret</span>',
   "         - Find the password, I dare you",
   '<span class="command">history</span>',
@@ -100,3 +102,4 @@ banner = [
   "<span class=\"color2\">For a list of available commands, type</span> <span class=\"command\">'ls' or 'help'</span><span class=\"color2\">.</span>",
   "<br>",
 ];
+
