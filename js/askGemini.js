@@ -1,5 +1,4 @@
 // askGemini.js
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 const SYSTEM_PROMPT = `
 You are an assistant who answers only about Vansh Agrawal's profile, projects, skills, and background. 
@@ -72,8 +71,21 @@ EduSkills TECH CAMP on Google Android.
 Teach Lead - Namma Sportika Sports Meet.
 `;
 
+const GEMINI_ENDPOINT = "https://terminal.agrawalvansh.me/api/gemini"; // Serverless function hosting the GPT call
+
 async function askGemini(query) {
-    if (!query) return "I didn't catch your question.";
+  if (!query) return "I didn't catch your question.";
+
+  // Always use the hosted API endpoint (works locally and in production)
+  try {
+    const res = await fetch(`${GEMINI_ENDPOINT}?q=${encodeURIComponent(query)}`);
+    if (!res.ok) throw new Error(`Status ${res.status}`);
+    const data = await res.json();
+    return data.reply || "No answer available.";
+  } catch (err) {
+    console.error("Gemini fetch failed:", err);
+    return "Sorry ‑ I couldn't retrieve an answer right now.";
+  }
 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`; // Make sure GEMINI_API_KEY is defined securely
 
