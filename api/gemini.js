@@ -1,11 +1,14 @@
 // api/gemini.js
 
 export default async function handler(req, res) {
-    const GEMINI_API_KEY = "AIzaSyBSsHO2iZecFf3fSDFhqCzd0qB8ULdx-1E";
+    const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
   
     const query = req.query.q;
-    if (!query || !GEMINI_API_KEY) {
-      return res.status(400).json({ error: "Missing query or API key" });
+    if (!query ) {
+      return res.status(400).json({ error: "Missing query" });
+    }
+    if (!GEMINI_API_KEY) {
+      return res.status(400).json({ error: "Missing API key" });
     }
   
     try {
