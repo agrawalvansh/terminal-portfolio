@@ -1,16 +1,16 @@
+/* Modify your existing body style */
 body {
   margin: 0;
-  padding: 20px 10px;
+  padding: 1rem 1rem;
   min-height: 99%;
-  min-width: 550px;
   color: #519975;
   background: #211D1B;
   font-family: cursor, monospace;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 body::-webkit-scrollbar {
-  display: none; /* Completely hide the scrollbar */
+  display: none;
 }
 ::selection {
   color: #211830;

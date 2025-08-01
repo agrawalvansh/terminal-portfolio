@@ -31,7 +31,7 @@ whoami = [
 contact = [
   "<br>",
   'website        <a href="' + website + '" target="_blank">agrawalvansh.me' + "</a>",
-  'github         <a href="' + github + '" target="_blank">github/vanshagrawal' + "</a>", 
+  'github         <a href="' + github + '" target="_blank">github/vanshagrawal' + "</a>",
   'linkedin       <a href="' + linkedin + '" target="_blank">linkedin/vanshagrawal' + "</a>",
   'instagram      <a href="' + instagram + '" target="_blank">instagram/mr.agrawalvansh' + '</a>',
   "<br>"
@@ -46,7 +46,7 @@ secret = [
 projects = [
   "<br>",
   "I'm always working on comp sciey (not really a word) things. Why don't you check out a few of my public code githubsitories? Just type 'github' to get the links.",
-  "<br>", 
+  "<br>",
   "Some for my projects are <span class=\"command\">ResQLink</span> – Disaster Response Platform (ServiceNow Integration), <span class=\"command\">Bhoomi</span> – Gardening Services and Plant Ordering Platform, <span class=\"command\">Namma Sportika</span> – Inter-University Sports Event Platform & <span class=\"command\">Vyapaar Connect</span> (AGS ERP) – Offline Inventory & Accounting Suite.",
   "<br>"
 ];
@@ -82,22 +82,33 @@ help = [
 ];
 
 banner = [
+  '<div class="banner-container"><pre>',
   '<span class="index">Vansh Agrawal (VA) Not A Corporation. Just Vibe & Chill.</span>',
-  "     ___   ____",
-  "   /' --;^/ ,-_\\     \\ | /       ",
-  "  / / --o\\ o-\\|\\ \\   --(_)--   ",
-  " /-/|o|-|\\-\\\\|\\\\|||    / | \\ ",
-  "  '`  ` |-|   `` '      ██╗   ██╗ █████╗ ███╗   ██╗███████╗██╗  ██╗     █████╗  ██████╗ ██████╗  █████╗ ██╗    ██╗ █████╗ ██╗     ",
-  "        |-|             ██║   ██║██╔══██╗████╗  ██║██╔════╝██║  ██║    ██╔══██╗██╔════╝ ██╔══██╗██╔══██╗██║    ██║██╔══██╗██║     ",
-  "        |-|O            ██║   ██║███████║██╔██╗ ██║███████╗███████║    ███████║██║  ███╗██████╔╝███████║██║ █╗ ██║███████║██║     ",
-  "        |-(\\,__         ╚██╗ ██╔╝██╔══██║██║╚██╗██║╚════██║██╔══██║    ██╔══██║██║   ██║██╔══██╗██╔══██║██║███╗██║██╔══██║██║     ",
-  "     ...|-|\\--,\\_..      ╚████╔╝ ██║  ██║██║ ╚████║███████║██║  ██║    ██║  ██║╚██████╔╝██║  ██║██║  ██║╚███╔███╔╝██║  ██║███████╗",
-  "   ,;;;;;;;;;;;;;;;;;;,.  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝",
-  "~~,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
   "                                    ",
+  "░██    ░██                                  ░██                            ",
+  "░██    ░██                                  ░██                            ",
+  "░██    ░██  ░██████   ░████████   ░███████  ░████████                      ",
+  "░██    ░██       ░██  ░██    ░██  ░██       ░██    ░██                     ",
+  " ░██   ░██   ░███████  ░██    ░██  ░███████  ░██    ░██                     ",
+  "  ░██░██    ░██   ░██ ░██    ░██       ░██  ░██    ░██                     ",
+  "   ░███     ░█████░██ ░██    ░██  ░███████  ░██    ░██                     ",
+  "                                                                           ",
+  "                                                                           ",
+  "                                                                           ",
+  "   ░███                                                                ░██ ",
+  "  ░██░██                                                               ░██ ",
+  " ░██   ░██   ░████████ ░██░████  ░██████   ░██    ░██    ░██  ░██████   ░██ ",
+  "░█████████ ░██    ░██ ░███           ░██  ░██    ░██    ░██       ░██  ░██ ",
+  "░██    ░██ ░██    ░██ ░██       ░███████   ░██  ░████  ░██   ░███████  ░██ ",
+  "░██    ░██ ░██   ░███ ░██      ░██   ░██    ░██░██ ░██░██    ░██  ░██  ░██ ",
+  "░██    ░██  ░█████░██ ░██       ░█████░██    ░███   ░███     ░█████░██ ░██ ",
+  "                  ░██                                                      ",
+  "            ░███████                                                       ",
+  "                                                                           ",
   '<span class="color2">Welcome to my site fello humans and bots.</span>',
   "                                    ",
   "<span class=\"color2\">For a list of available commands, type</span> <span class=\"command\">'ls' or 'help'</span><span class=\"color2\">.</span>",
   "<br>",
+  "</pre></div>",
 ];
-
+ 
