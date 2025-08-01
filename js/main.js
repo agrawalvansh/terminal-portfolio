@@ -80,15 +80,6 @@ function enterKey(e) {
 }
 
 function commander(cmd) {
-  // If the previous command was just `ask`, treat the current input as the query
-  if (awaitingAsk) {
-    awaitingAsk = false;
-    askGemini(cmd.trim()).then((answer) => {
-      addLine(answer, "color2", 80);
-    });
-    return;
-  }
-
   switch (cmd.toLowerCase()) {
     case "help":
       loopLines(help, "color2 margin", 80);
@@ -184,11 +175,11 @@ function addLine(text, style, time) {
     next.innerHTML = t;
     next.className = style;
 
-    // Treat regular content (everything except the banner) as paragraph text
-    // Banner lines come in with an empty style string, whereas informational
-    // content uses classes like "color2" / "margin". Only the banner should
-    // keep the typing animation + nowrap behaviour.
-    if (style && style.indexOf("color2") !== -1) {
+    // Treat all content (banner and informational lines) as regular paragraphs
+    // so that long lines can wrap on small screens. Disable typing animation
+    // and allow normal white-space behaviour for any line that is not a direct
+    // command echo (those have class "no-animation").
+    if (!style || style.indexOf("color2") !== -1) {
       // Allow normal paragraph wrapping
       next.style.whiteSpace = "normal";
       // Disable the typing animation for paragraphs
