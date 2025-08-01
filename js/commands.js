@@ -77,8 +77,6 @@ help = [
   "         - Bring on the spam",
   '<span class="command">clear</span>',
   "         - Clear terminal",
-  '<span class="command">banner</span>',
-  "         - Display the header",
 ];
 
 banner = [

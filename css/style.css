@@ -1,33 +1,92 @@
 /* Modify your existing body style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding: 1rem 1rem;
-  min-height: 99%;
+  min-height: 100vh;
   color: #519975;
   background: #211D1B;
   font-family: cursor, monospace;
   overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#start {
+  padding: 1rem 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.terminal-header {
+  padding: 10px 15px;
+  background: #1a1615;
+  border-bottom: 1px solid #3a3635;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terminal-title {
+  color: #73ABAD;
+  font-size: 1rem;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.control-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.close {
+  background-color: #ff5f57;
+}
+
+.minimize {
+  background-color: #febc2e;
+}
+
+.maximize {
+  background-color: #28c840;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
+
 ::selection {
   color: #211830;
   background-color: #519975;
 }
+
 ::-moz-selection {
   color: #211830;
   background-color: #519975;
 }
+
 textarea {
   left: -1000px;
   position: absolute;
 }
+
 b {
   font-weight: bold;
   text-decoration: underline;
 }
+
 /* Cursor Start */
 .cursor {
   font-size: 12px;
@@ -45,16 +104,19 @@ b {
   text-decoration: blink;
   animation: blinker 1s linear infinite;
 }
+
 @keyframes blinker {
   50% {
     opacity: 0;
   }
 }
+
 #command {
   cursor: text;
   height: 50px;
   color: #73ABAD;
 }
+
 #liner {
   line-height: 1.3em;
   margin-top: -2px;
@@ -62,21 +124,26 @@ b {
   animation-delay: 1.2s;
   opacity: 0;
 }
+
 #liner::before {
   color: #519975;
   content: "visitor@agrawalvansh.me:~$";
 }
+
 #liner.password::before {
   content: "Password:";
 }
+
 @keyframes show {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
+
 /* Cursor End */
 p {
   display: block;
@@ -88,47 +155,60 @@ p {
   letter-spacing: 0.05em;
   animation: typing 0.5s steps(30, end);
 }
+
 .no-animation {
   animation: typing 0 steps(30, end);
 }
+
 .margin {
   margin-left: 20px;
 }
+
 @keyframes typing {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
+
 .index {
   color: #DCDCCC;
 }
+
 .color2 {
   color: #B89076;
 }
+
 .command {
   color: #73ABAD;
-  text-shadow: 0 0 5px #73ABAD; 
+  text-shadow: 0 0 5px #73ABAD;
 }
+
 .error {
   color: #B89076;
 }
+
 .white {
   color: #fff;
 }
+
 .inherit,
 a {
   color: #9C8394;
 }
+
 a {
   text-decoration: inherit;
 }
+
 a:hover {
   background: #73ABAD;
   color: #211830;
 }
+
 a:focus {
   outline: 0;
 }

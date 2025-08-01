@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-    <link rel="icon" type="image/x-icon" href="img/fav.png" />
-    <title>Vansh's Terminal Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <link rel="icon" type="image/x-icon" href="img/fav.png" />
+  <title>Vansh's Terminal Portfolio</title>
 </head>
+
 <body>
+  <div class="terminal-header">
+    <div class="terminal-controls">
+      <div class="control-btn close"></div>
+      <div class="control-btn minimize"></div>
+      <div class="control-btn maximize"></div>
+    </div>
+    <div class="terminal-title">terminal — bash</div>
+    <div></div>
+  </div>
+
+  <div id="start">
     <div id="terminal">
       <a id="before"></a>
     </div>
     <div id="command" onclick="$('texter').focus();">
-      <textarea
-        type="text"
-        id="texter"
-        onkeyup="typeIt(this, event)"
-        onkeydown="typeIt(this, event); 
-                   moveIt(this.value.length, event)"
-        onkeypress="typeIt(this, event);"
-        autofocus
-      ></textarea>
+      <textarea type="text" id="texter" onkeyup="typeIt(this, event)" onkeydown="typeIt(this, event); 
+                     moveIt(this.value.length, event)" onkeypress="typeIt(this, event);" autofocus></textarea>
       <div id="liner">
         <span id="typer"></span><b class="cursor" id="cursor">█</b>
       </div>
     </div>
-    <script src="js/caret.js"></script>
-    <script src="js/commands.js"></script>
-    <script src="js/main.js"></script>
+  </div>
+  <script src="js/caret.js"></script>
+  <script src="js/commands.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
