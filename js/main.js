@@ -102,10 +102,6 @@ function commander(cmd) {
     case "whoami":
       loopLines(whoami, "color2 margin", 80);
       break;
-    case "video":
-      addLine("Opening YouTube...", "color2", 80);
-      newTab(youtube);
-      break;
     case "sudo":
       addLine("Oh no, you're not admin...", "color2", 80);
       setTimeout(function() {
@@ -163,20 +159,6 @@ function commander(cmd) {
     case "github":
       addLine("Opening GitHub...", "color2", 0);
       newTab(github);
-      break;
-    case "ask":
-      
-      // Remove the command keyword and trim remaining text to capture the actual query
-      const userQuery = command.innerHTML.replace("ask", "").trim();
-      // If no query was provided, prompt the user for one
-      if (!userQuery) {
-        awaitingAsk = true; // wait for next input as the query
-        addLine("ask your query about vansh", "color2", 80);
-      } else {
-        askGemini(userQuery).then((answer) => {
-          addLine(answer, "color2", 80);
-        });
-      }
       break;
     default:
       addLine("<span class=\"inherit\">Command not found. For a list of commands, type <span class=\"command\">'ls' or 'help'</span>.</span>", "error", 100);
