@@ -30,10 +30,14 @@ whoami = [
 
 contact = [
   "<br>",
-  'website        <a href="' + website + '" target="_blank">agrawalvansh.me' + "</a>",
-  'github         <a href="' + github + '" target="_blank">github/vanshagrawal' + "</a>",
-  'linkedin       <a href="' + linkedin + '" target="_blank">linkedin/vanshagrawal' + "</a>",
-  'instagram      <a href="' + instagram + '" target="_blank">instagram/mr.agrawalvansh' + '</a>',
+  'website ',
+  '       - <a href="' + website + '" target="_blank">agrawalvansh.me' + "</a>",
+  'github ',
+  '       - <a href="' + github + '" target="_blank">github/vanshagrawal' + "</a>",
+  'linkedin ',
+  '       - <a href="' + linkedin + '" target="_blank">linkedin/vanshagrawal' + "</a>",
+  'instagram ',
+  '       - <a href="' + instagram + '" target="_blank">instagram/mr.agrawalvansh' + '</a>',
   "<br>"
 ];
 

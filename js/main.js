@@ -12,8 +12,19 @@ var commands = [];
 var awaitingAsk = false;
 
 setTimeout(function() {
+  // Ensure we start at the very top of the page (important for mobile)
+  window.scrollTo(0, 0);
   loopLines(banner, "", 80);
-  textarea.focus();
+  // Focus without allowing the browser to auto-scroll (fallback if not supported)
+  if (typeof textarea.focus === "function") {
+    try {
+      textarea.focus({ preventScroll: true });
+    } catch (_) {
+      textarea.focus();
+    }
+  }
+  // Double-check we stay at the top after focusing (mobile Safari quirk)
+  window.scrollTo(0, 0);
 }, 100);
 
 window.addEventListener("keyup", enterKey);
