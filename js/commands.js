@@ -18,7 +18,7 @@ whois = [
   "<br>",
   "Nowadays I'm developing a method to download food... I wish! My projects include offline inventory management for small businesses, digital platforms that streamline emergency response coordination, and web app connecting people to gardening services. Whether it’s a hackathon, a personal prototype, or an internship assignment, I love turning ideas into products that work.",
   "<br>",
-  "Please feel free to get in touch with me to discuss any cool opportunities. My contact details can be found by typing 'contact', and if you would like to check out my CV, simply type 'cv'.",
+  "Please feel free to get in touch with me to discuss any cool opportunities. My contact details can be found by typing 'contact', and if you would like to check out my resume, simply type 'resume'.",
   "<br>"
 ];
 
@@ -33,9 +33,9 @@ contact = [
   'website ',
   '       - <a href="' + website + '" target="_blank">agrawalvansh.me' + "</a>",
   'github ',
-  '       - <a href="' + github + '" target="_blank">github/vanshagrawal' + "</a>",
+  '       - <a href="' + github + '" target="_blank">github/agrawalvansh' + "</a>",
   'linkedin ',
-  '       - <a href="' + linkedin + '" target="_blank">linkedin/vanshagrawal' + "</a>",
+  '       - <a href="' + linkedin + '" target="_blank">linkedin/agrawalvansh' + "</a>",
   'instagram ',
   '       - <a href="' + instagram + '" target="_blank">instagram/mr.agrawalvansh' + '</a>',
   "<br>"
@@ -51,7 +51,15 @@ projects = [
   "<br>",
   "I'm always working on comp sciey (not really a word) things. Why don't you check out a few of my public code githubsitories? Just type 'github' to get the links.",
   "<br>",
-  "Some for my projects are <span class=\"command\">ResQLink</span> – Disaster Response Platform (ServiceNow Integration), <span class=\"command\">Bhoomi</span> – Gardening Services and Plant Ordering Platform, <span class=\"command\">Namma Sportika</span> – Inter-University Sports Event Platform & <span class=\"command\">Vyapaar Connect</span> (AGS ERP) – Offline Inventory & Accounting Suite.",
+  "Some for my projects are ",
+  "<br>",
+  "<span class=\"command\">ResQLink</span> – Disaster Response Platform (ServiceNow Integration)", 
+  "<br>",
+  "<span class=\"command\">Bhoomi</span> – Gardening Services and Plant Ordering Platform", 
+  "<br>",
+  "<span class=\"command\">Namma Sportika</span> – Inter-University Sports Event Platform", 
+  "<br>",
+  "<span class=\"command\">Vyapaar Connect</span> (AGS ERP) – Offline Inventory & Accounting Suite.",
   "<br>"
 ];
 
